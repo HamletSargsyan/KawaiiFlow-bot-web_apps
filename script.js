@@ -25,9 +25,9 @@ aboutInput.addEventListener('input', checkFields);
 function checkFields() {
     let areFieldsFilled = ageInput.value && activityInput.value && activeInChatInput.value && monitorChatInput.value && levelInput.value && aboutInput.value;
     if (areFieldsFilled) {
-        tg.MainButton.show();
+        tg.MainButton.enable();
     } else {
-        tg.MainButton.hide();
+        tg.MainButton.disable();
     }
 }
 
