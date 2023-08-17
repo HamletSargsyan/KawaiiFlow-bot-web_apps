@@ -3,7 +3,6 @@ let tg = window.Telegram.WebApp;
 tg.expand(); //расширяем на все окно  
 
 tg.MainButton.text = "Changed Text"; //изменяем текст кнопки 
-tg.MainButton.setText("Changed Text1"); //изменяем текст кнопки иначе
 tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
 tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
 tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры 
@@ -44,5 +43,14 @@ Telegram.WebApp.onEvent('mainButtonClicked', function(){
     let level = levelInput.value;
     let about = aboutInput.value;
     
-    tg.sendData([age, activity, activeInChat, monitorChat, level, about]); 
+    tg.sendData(`ЗАЯВКА
+
+                Возраст: ${age}
+                Актив в чате ${activeInChat}
+                Крока/розыгрыш ${activity}
+                Следжка за чатом: ${monitorChat}
+                Уровень: ${level}
+                О себе:
+                
+                ${about}`); 
 });
