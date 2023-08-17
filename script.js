@@ -50,4 +50,6 @@ submitButton.onEvent('click', function(){
                 О себе:\n\n
                 
                 ${about}`);
+    
+    tg.close()
 });
