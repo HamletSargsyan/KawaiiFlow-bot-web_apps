@@ -45,5 +45,4 @@ Telegram.WebApp.onEvent('mainButtonClicked', function(){
     let about = aboutInput.value;
     
     tg.sendData([age, activity, activeInChat, monitorChat, level, about]); 
-    // При клике на основную кнопку отправляем данные в строковом виде
 });
