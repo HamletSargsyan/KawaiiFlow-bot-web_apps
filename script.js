@@ -40,7 +40,7 @@ Telegram.WebApp.onEvent('mainButtonClicked', function(){
     let level = levelInput.value;
     let about = aboutInput.value;
     
-    tg.sendData('mainButtonClicked', `ЗАЯВКА\n\n
+    tg.sendData(`ЗАЯВКА\n\n
 
                 Возраст: ${age}\n
                 Актив в чате ${activeInChat}\n
