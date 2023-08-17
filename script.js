@@ -25,14 +25,14 @@ aboutInput.addEventListener('input', checkFields);
 function checkFields() {
     let areFieldsFilled = ageInput.value && activityInput.value && activeInChatInput.value && monitorChatInput.value && levelInput.value && aboutInput.value;
     if (areFieldsFilled) {
-        tg.MainButton.enable();
+        tg.MainButton.show();
     } else {
-        tg.MainButton.disable();
+        tg.MainButton.hide();
     }
 }
 
 // Добавляем обработчик события при клике на кнопку
-Telegram.WebApp.onEvent('mainButtonClicked', function(){
+submitButton.onEvent('click', function(){
     let age = ageInput.value;
     let activity = activityInput.value;
     let activeInChat = activeInChatInput.value;
