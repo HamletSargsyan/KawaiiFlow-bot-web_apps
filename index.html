@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Набор в админы</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Набор в админы</h1>
+        <form id="adminForm">
+            <label for="age">Возраст:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label>Будешь проводить кроко или розыгрыш?</label>
+            <select id="activity" name="activity" required>
+                <option value="да">Да</option>
+                <option value="нет">Нет</option>
+            </select>
+
+            <label>Будешь активным в чате?</label>
+            <select id="activeInChat" name="activeInChat" required>
+                <option value="да">Да</option>
+                <option value="нет">Нет</option>
+            </select>
+
+            <label>Будешь следить за чатом?</label>
+            <select id="monitorChat" name="monitorChat" required>
+                <option value="да">Да</option>
+                <option value="нет">Нет</option>
+            </select>
+
+            <label for="level">Уровень (число):</label>
+            <input type="number" id="level" name="level" required>
+
+            <label for="about">О себе:</label>
+            <textarea id="about" name="about" required></textarea>
+
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
