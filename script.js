@@ -1,5 +1,13 @@
 let tg = window.Telegram.WebApp;
 
+tg.expand(); //расширяем на все окно  
+
+tg.MainButton.text = "Changed Text"; //изменяем текст кнопки 
+tg.MainButton.setText("Changed Text1"); //изменяем текст кнопки иначе
+tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
+tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
+tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры 
+
 // Получаем ссылки на поля ввода и кнопку
 let ageInput = document.getElementById("age");
 let activityInput = document.getElementById('activity');
