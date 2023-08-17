@@ -1,8 +1,8 @@
 let tg = window.Telegram.WebApp;
 
-tg.expand(); //расширяем на все окно  
+tg.expand(); // расширяем на всё окно  
 
-tg.MainButton.text = "Отправить"; //изменяем текст кнопки 
+tg.MainButton.text = "Отправить"; // изменяем текст кнопки 
 
 // Получаем ссылки на поля ввода и кнопку
 let ageInput = document.getElementById("age");
@@ -32,24 +32,18 @@ function checkFields() {
 }
 
 // Добавляем обработчик события при клике на кнопку
-submitButton.onEvent('click', function(){
+submitButton.addEventListener('click', function(){
     let age = ageInput.value;
     let activity = activityInput.value;
     let activeInChat = activeInChatInput.value;
     let monitorChat = monitorChatInput.value;
     let level = levelInput.value;
     let about = aboutInput.value;
-    
-    tg.sendData(`ЗАЯВКА\n\n
 
-                Возраст: ${age}\n
-                Актив в чате ${activeInChat}\n
-                Крока/розыгрыш ${activity}\n
-                Следжка за чатом: ${monitorChat}\n
-                Уровень: ${level}\n
-                О себе:\n\n
-                
-                ${about}`);
+    // Экранирование переводов строк
+    about = about.replace(/\n/g, "\\n");
     
-    tg.close()
+    tg.sendData(`ЗАЯВКА\n\nВозраст: ${age}\nАктив в чате: ${activeInChat}\nКрока/розыгрыш: ${activity}\nСлежка за чатом: ${monitorChat}\nУровень: ${level}\nО себе:\n\n${about}`);
+    
+    tg.close();
 });
